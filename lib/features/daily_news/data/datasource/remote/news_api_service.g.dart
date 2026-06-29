@@ -22,11 +22,11 @@ class _NewsApiService implements NewsApiService {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<HttpResponse<List<ArticleModel>>> getArticles(
-    String country,
-    String apiKey,
-    String category,
-  ) async {
+  Future<HttpResponse<List<ArticleModel>>> getNewsArticles({
+    String? country,
+    String? apiKey,
+    String? category,
+  }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'country': country,
